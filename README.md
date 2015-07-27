@@ -60,6 +60,7 @@ Configuration of framework-specific aspects of the application are performed by 
 - `restart_command`: a command to run when restarting the application
 - `environment_name`: the name of a framework-specific "environment" (for example the Rails environment). By default it is the same as the Chef environment, unless it is `_default`, in which case it is set to `production`
 - `enable_submodules`: whether to enable git submodules in the deploy, passed into the deploy resource.
+- `retries`: You shouldn't ever need to use this key, but it is available if you have deploy shennanigans with Git and Chef 12
 
 ### Callback Attributes
 You can also set a few attributes on this LWRP that are interpreted as callback to be called at specific points during a deployment. If you pass a block, it will be evaluated within a new context. If you pass a string, it will be interpreted as a path (relative to the release directory) to a file; if it exists, it will be loaded and evaluated as though it were a Chef recipe.
